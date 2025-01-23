@@ -1,5 +1,4 @@
-This checklist can guide you through your Machine Learning projects. 
-There are  eight main steps:
+This checklist can guide you through your Machine Learning projects.There are  eight main steps:
 1. Frame the problem and look at the big picture.
 2. Get the data.
 3. Explore the data to gain insights.
@@ -39,7 +38,11 @@ Explore the Data
 Note: try to get insights from a field expert for these steps.  
 1. Create a copy of the data for exploration (sampling it down to a manageable size  if necessary). 
 2. Create a Jupyter notebook to keep a record of your data exploration. 
-3. Study each attribute and its characteristics:  • Name • Type (categorical, int/float, bounded/unbounded, text, structured, etc.)• Usefulness for the task • Type of distribution (Gaussian, uniform, logarithmic, etc.)  
+3. Study each attribute and its characteristics: 
+• Name 
+• Type (categorical, int/float, bounded/unbounded, text, structured, etc.)
+• Usefulness for the task 
+• Type of distribution (Gaussian, uniform, logarithmic, etc.)  
 4. For supervised learning tasks, identify the target attribute(s). 
 5. Visualize the data. 
 6. Study the correlations between attributes. 
@@ -47,7 +50,8 @@ Note: try to get insights from a field expert for these steps.
 8. Identify the promising transformations you may want to apply. 
 9. Identify extra data that would be useful . 
 10. Document what you have learned.
-Prepare the Data  Notes:
+Prepare the Data  
+Notes:
 • Work on copies of the data (keep the original dataset intact).
 • Write functions for all data transformations you apply, for five reasons:
  — So you can easily prepare the data the next time you get a fresh dataset 
@@ -66,7 +70,8 @@ Prepare the Data  Notes:
 • Aggregate features into promising new features.  
 4. Feature scaling:  
 • Standardize or normalize features.  
-Shortlist Promising Models  Notes:  
+Shortlist Promising Models 
+Notes:  
 • If the data is huge, you may want to sample smaller training sets so you can train  many different models in a reasonable time (be aware that this penalizes complex  models such as large neural nets or Random Forests). 
 • Once again, try to automate these steps as much as possible.  
 1. Train many quick-and-dirty models from different categories (e.g., linear, naive  Bayes, SVM, Random Forest, neural net, etc.) using standard parameters.
@@ -78,14 +83,16 @@ Shortlist Promising Models  Notes:
 5. Perform a quick round of feature selection and engineering. 
 6. Perform one or two more quick iterations of the five previous steps.  
 7. Shortlist the top three to five most promising models, preferring models that  make different types of errors.  
-Fine-Tune the System  Notes:  
+Fine-Tune the System 
+Notes:  
 • You will want to use as much data as possible for this step, especially as you move  toward the end of fine-tuning.
 • As always, automate what you can.  
 1. Fine-tune the hyperparameters using cross-validation:  
 • Treat your data transformation choices as hyperparameters, especially when  you are not sure about them (e.g., if you’re not sure whether to replace missing  values with zeros or with the median value, or to just drop the rows).  
-• Unless there are very few hyperparameter values to explore, prefer random  search over grid search. If training is very long, you may prefer a Bayesian  optimization approach (e.g., using Gaussian process priors, as described by  Jasper Snoek et al.).1  
+• Unless there are very few hyperparameter values to explore, prefer random  search over grid search. If training is very long, you may prefer a Bayesian  optimization approach (e.g., using Gaussian process priors, as described by  Jasper Snoek et al.).
 2. Try Ensemble methods. Combining your best models will often produce better  performance than running them individually.  
-3. Once you are confident about your final model, measure its performance on the  test set to estimate the generalization error.  Don’t tweak your model after measuring the generalization error:  you would just start overfitting the test set.  
+3. Once you are confident about your final model, measure its performance on the  test set to estimate the generalization error. 
+Note: don’t tweak your model after measuring the generalization error:  you would just start overfitting the test set.  
 Present Your Solution: 
 1. Document what you have done. 
 2. Create a nice presentation.  
